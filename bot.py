@@ -65,10 +65,6 @@ async def snus( ctx ):
 embed=discord.Embed(title="**Попався, снюсоед проклятый!**", url="https://youtu.be/dQw4w9WgXcQ", description="Верни снюс, иначе взломаю попу :D", color=0x9107ed)
 embed.set_thumbnail(url="https://media1.tenor.com/images/c658fa9f7884021318a505266144949c/tenor.gif?itemid=15184964")
 
-@client.command()
-async def play(ctx, *, command = None):
-    print(ctx)
-
 @client.command(pass_context=True, brief="This will play a song 'play [url]'", aliases=['pl'])
 async def play(ctx, url: str):
     song_there = os.path.isfile("song.mp3")
