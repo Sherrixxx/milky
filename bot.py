@@ -73,7 +73,7 @@ async def play(ctx, *, command = None):
     """Включить музыку."""
     global server, server_id, name_channel
     author = ctx.author
-    if command == None
+    if command == None:
         server = ctx.guild
         name_channel = 
 
