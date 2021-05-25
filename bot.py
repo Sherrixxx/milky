@@ -123,7 +123,7 @@ async def play(ctx, *, command = None):
         try:
             if sond_there:
                 os.remove('sond.mp3')
-        except PermissionError
+        except PermissionError:
             await ctx.channel.send('Недостаточно прав для удаления.')
             return
         ydl_opts = {
