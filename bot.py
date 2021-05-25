@@ -65,7 +65,7 @@ async def snus( ctx ):
 embed=discord.Embed(title="**Попався, снюсоед проклятый!**", url="https://youtu.be/dQw4w9WgXcQ", description="Верни снюс, иначе взломаю попу :D", color=0x9107ed)
 embed.set_thumbnail(url="https://media1.tenor.com/images/c658fa9f7884021318a505266144949c/tenor.gif?itemid=15184964")
 
-@bot.command(pass_context=True, brief="Бот присоединится к голосовому каналу.", aliases=['j', 'jo'])
+@client.command(pass_context=True, brief="Бот присоединится к голосовому каналу.", aliases=['j', 'jo'])
 async def join(ctx):
     channel = ctx.message.author.voice.channel
     if not channel:
