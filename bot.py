@@ -51,6 +51,14 @@ async def help( ctx ):
 async def sus( ctx ):
 	await ctx.send( 'SUS :flushed::flushed::flushed::flushed::flushed::flushed::flushed:AMOGUS:flushed::flushed::astonished::astonished::face_with_monocle: **42**:flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed: لماذا قمت بترجمة ذلك  :cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy:**424242424242**:flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed: https://c.tenor.com/h99LQHUExJIAAAAM/19dollar-fortnite-card-among-us.gif ')
 
+@client.command( pass_context = True )
+
+async def uembed( ctx ):
+        await ctx.send(embed=embed)
+embed=discord.Embed(title="**Проверка окда**", description="Я бот Milky (Way)", color=0x9107ed)
+embed.set_thumbnail(url="https://i.pinimg.com/originals/30/88/e1/3088e1abbefe13a1754bd56deafcde2d.jpg")
+embed.add_field(name="undefined", value="undefined", inline=False)
+
 token = os.environ.get('BOT_TOKEN')
 
 client.run(str(token))
