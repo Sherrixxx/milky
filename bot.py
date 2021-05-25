@@ -65,6 +65,24 @@ async def snus( ctx ):
 embed=discord.Embed(title="**Попався, снюсоед проклятый!**", url="https://youtu.be/dQw4w9WgXcQ", description="Верни снюс, иначе взломаю попу :D", color=0x9107ed)
 embed.set_thumbnail(url="https://media1.tenor.com/images/c658fa9f7884021318a505266144949c/tenor.gif?itemid=15184964")
 
+@bot.command(pass_context=True, brief="Бот присоединится к голосовому каналу.", aliases=['j', 'jo'])
+async def join(ctx):
+    channel = ctx.message.author.voice.channel
+    if not channel:
+        await ctx.send("<:milky_cross:846709234204934174> Вы не в голосовом канале!")
+        return
+    voice = get(bot.voice_clients, guild=ctx.guild)
+    if voice and voice.is_connected():
+        await voice.move_to(channel)
+    else:
+        voice = await channel.connect()
+    await voice.disconnect()
+    if voice and voice.is_connected():
+        await voice.move_to(channel)
+    else:
+        voice = await channel.connect()
+    await ctx.send(f"<:milky_tick:846709199747809281> Уже захожу в **{channel}**!")
+
 @client.command(pass_context=True, brief="This will play a song 'play [url]'", aliases=['pl'])
 async def play(ctx, url: str):
     song_there = os.path.isfile("song.mp3")
