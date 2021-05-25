@@ -116,7 +116,7 @@ async def play(ctx, *, command = None):
     if sourse == None:
         pass
     elif sourse.startswith('http'):
-        if not check_domains(sourse)
+        if not check_domains(sourse):
             await ctx.channel.send(f'<:milky_cross:846709234204934174> {author.mention} Что это за ссылка? Кидай ссылку ютуба!')
             return
         
@@ -133,6 +133,7 @@ async def play(ctx, *, command = None):
 
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             ydl.download([sourse])
+        for file in os.listdir
 
 token = os.environ.get('BOT_TOKEN')
 
