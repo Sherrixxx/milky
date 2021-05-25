@@ -119,7 +119,13 @@ async def play(ctx, *, command = None):
         if not check_domains(sourse):
             await ctx.channel.send(f'<:milky_cross:846709234204934174> {author.mention} Что это за ссылка? Кидай ссылку ютуба!')
             return
-        
+        sond_there = os.path.isfile('music/sond.mp3')
+        try:
+            if sond_there:
+                os.remove('sond.mp3')
+        except PermissionError
+            await ctx.channel.send('Недостаточно прав для удаления.')
+            return
         ydl_opts = {
             'format': 'bestaudio/best',
             'postprocessors': [
@@ -133,7 +139,12 @@ async def play(ctx, *, command = None):
 
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             ydl.download([sourse])
-        for file in os.listdir
+        for file in os.listdir('music/'):
+            if file.endswith('.mp3'):
+                os.rename(file, 'sond.mp3')
+        voice.play(discord.FFmpegPCMAudio('sond.mp3'))
+    else:
+        voice.play(discord.FFmpegPCMAudio('music/{sourse}'))
 
 token = os.environ.get('BOT_TOKEN')
 
