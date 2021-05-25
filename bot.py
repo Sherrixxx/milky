@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 import os
 
-from pymongo.mongo_client import MongoClient
 client = commands.Bot(command_prefix = 'm.')
 client.remove_command('help')
 cluster = MongoClient("mongodb+srv://morgenshtern:tupaparolotbotaklassno@gg-wp.tltaz.mongodb.net/morgenshtern?retryWrites=true&w=majority")
