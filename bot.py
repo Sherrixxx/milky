@@ -65,6 +65,13 @@ async def snus( ctx ):
 embed=discord.Embed(title="**Попався, снюсоед проклятый!**", url="https://youtu.be/dQw4w9WgXcQ", description="Верни снюс, иначе взломаю попу :D", color=0x9107ed)
 embed.set_thumbnail(url="https://media1.tenor.com/images/c658fa9f7884021318a505266144949c/tenor.gif?itemid=15184964")
 
+@client.command( pass_context = True )
+
+async def credits( ctx ):
+        await ctx.send(embed=embed)
+embed=discord.Embed(title="**Мои создатели**", description="Вы все знаете, что я не мог создаваться сам по себе :D. Да, у меня есть люди, которые вдохнули в меня жизнь! **Вау, кто же это?**  **━━━━━━━━━━━━━━━━━━━━━** **`Sherry#7700`** — Мой создатель. **`Orz#6943`** — Помогал моему создателю с моим оживлением. **━━━━━━━━━━━━━━━━━━━━━**  Официальный сервер в честь меня: **===>** [**Тык =)**](https://discord.gg/r2SMG8FCQn)", color=0x00ffe1)
+embed.set_footer(text="Milky ・ 2021")
+
 server, server_id, name_channel = None, None, None
 
 domains = ['https://www.youtube.com/', 'http://www.youtube.com/', 'https://youtu.be/', 'http://youtu.be/']
