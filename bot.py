@@ -67,7 +67,7 @@ embed.set_thumbnail(url="https://media1.tenor.com/images/c658fa9f7884021318a5052
 
 @client.command( pass_context = True )
 
-async def snus( ctx ):
+async def credits( ctx ):
         await ctx.send(embed=embed)
 embed=discord.Embed(title="**Мои создатели**", description="Вы все знаете, что я не мог создаваться сам по себе :D. Да, у меня есть люди, которые вдохнули в меня жизнь! **Вау, кто же это?**  **━━━━━━━━━━━━━━━━━━━━━** **`Sherry#7700`** — Мой создатель. **`Orz#6943`** — Помогал моему создателю с моим оживлением. **━━━━━━━━━━━━━━━━━━━━━**  Официальный сервер в честь меня: **===>** [**Тык =)**](https://discord.gg/r2SMG8FCQn)", color=0x00ffe1)
 embed.set_footer(text="Milky ・ 2021")
