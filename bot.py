@@ -57,7 +57,18 @@ async def uembed( ctx ):
         await ctx.send(embed=embed)
 embed=discord.Embed(title="**Проверка окда**", description="Я бот Milky (Way)", color=0x9107ed)
 embed.set_thumbnail(url="https://i.pinimg.com/originals/30/88/e1/3088e1abbefe13a1754bd56deafcde2d.jpg")
-embed.add_field(name="undefined", value="undefined", inline=False)
+
+@client.command( pass_context = True )
+
+async def snus( ctx ):
+        await ctx.send(embed=embed)
+embed=discord.Embed(title="**Попався, снюсоед проклятый!**", url="https://youtu.be/dQw4w9WgXcQ", description="Верни снюс, иначе взломаю попу :D", color=0x9107ed)
+embed.set_thumbnail(url="https://media1.tenor.com/images/c658fa9f7884021318a505266144949c/tenor.gif?itemid=15184964")
+
+@client.command()
+async def play(ctx, *, command = None):
+    print(ctx)
+
 
 token = os.environ.get('BOT_TOKEN')
 
