@@ -75,7 +75,7 @@ async def play(ctx, *, command = None):
     author = ctx.author
     if command == None:
         server = ctx.guild
-        name_channel = 
+
 
 token = os.environ.get('BOT_TOKEN')
 
