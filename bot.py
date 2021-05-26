@@ -39,7 +39,7 @@ async def on_member_join(member):
 
 @client.event
 async def on_ready():
-	await client.change_presence(status=discord.Status.idle,activity=discord.Game("m.help"))
+	await client.change_presence(status=discord.Status.idle,activity=discord.Game(" m.help | discord.gg/r2SMG8FCQn"))
 
 @client.command( pass_context = True )
 
