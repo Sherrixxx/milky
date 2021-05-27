@@ -54,30 +54,30 @@ async def sus( ctx ):
 @client.command( pass_context = True )
 
 async def uembed( ctx ):
-        await ctx.send(embed=embed)
 embed=discord.Embed(title="**Проверка окда**", description="Я бот Milky (Way)", color=0x9107ed)
 embed.set_thumbnail(url="https://i.pinimg.com/originals/30/88/e1/3088e1abbefe13a1754bd56deafcde2d.jpg")
+        await ctx.send(embed=embed)
 
 @client.command( pass_context = True )
 
 async def snus( ctx ):
-        await ctx.send(embed=embed)
 embed=discord.Embed(title="**Попався, снюсоед проклятый!**", url="https://youtu.be/dQw4w9WgXcQ", description="Верни снюс, иначе взломаю попу :D", color=0x9107ed)
 embed.set_thumbnail(url="https://media1.tenor.com/images/c658fa9f7884021318a505266144949c/tenor.gif?itemid=15184964")
+        await ctx.send(embed=embed)
 
 @client.command( pass_context = True )
 
 async def credits( ctx ):
-        await ctx.send(embed=embed)
 embed=discord.Embed(description="Вы все знаете, что я не мог создаваться сам по себе :D. Да, у меня есть люди, которые вдохнули в меня жизнь! **Вау, кто же это?**  \n \n**━━━━━━━━━━━━━━━━━━━━━** \n**`Sherry#7700`** — Мой создатель. \n**`Orz#6943`** — Помогал моему создателю с моим оживлением. \n**━━━━━━━━━━━━━━━━━━━━━**  \n \nОфициальный сервер в честь меня: **===>** [Тык =)](https://discord.gg/r2SMG8FCQn)")
 embed.set_thumbnail(url="https://i.imgur.com/bk1lX1D.png")
+        await ctx.send(embed=embed)
 
 @client.command( pass_context = True )
 
 async def ударить( ctx ):
-        await ctx.send(embed=embed)
 embed=discord.Embed(title="Удар", description="{{author.mention}} Ударил ()", color=0xfff700)
 embed.set_thumbnail(url="https://img.gifmagazine.net/gifmagazine/images/656808/original.gif")
+        await ctx.send(embed=embed)
 
 token = os.environ.get('BOT_TOKEN')
 
