@@ -8,8 +8,6 @@ client.remove_command('help')
 cluster = MongoClient("mongodb+srv://morgenshtern:tupaparolotbotaklassno@gg-wp.tltaz.mongodb.net/morgenshtern?retryWrites=true&w=majority")
 collection = cluster.ecodb.colldb
 
-punch_gifs = [ 'https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/3377879/SwordFight.gif?1358704239', 'https://img.gifmagazine.net/gifmagazine/images/656808/original.gif' ]
-
 @client.event
 async def on_ready():
     print('Зарегистрирован в {0}.'.format(client.user))
@@ -45,12 +43,14 @@ async def credits( ctx ):
 @client.command( pass_context = True )
 
 async def ударить(ctx, member: discord.Member = None):
-    if msg in punch_gifs:
-        await message.channel.send( 'embed=discord.Embed(title="**Удар**", description = "{0} Ударил {1}#{2}.".format(ctx.author, member.name, member.discriminator), color=0xfff700)
-    embed.set_thumbnail(url="https://img.gifmagazine.net/gifmagazine/images/656808/original.gif")' )
-    if member is None:
-        return await ctx.send("Ты что, воздух ударил?")
-    await ctx.send(embed=embed)
+	gifs_punch=["https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/3377879/SwordFight.gif?1358704239", "https://img.gifmagazine.net/gifmagazine/images/656808/original.gif"]
+	punch=random.choice(gifs_punch)
+	await ctx.send(punch)
+	    if member is None:
+		return await ctx.send("Ты что, воздух ударил?")
+	    embed=discord.Embed(title="Удар", description = "{0} ударил {1}#{2}.".format(ctx.author, member.name, member.discriminator), color=0xfff700)
+	    embed.set_thumbnail(url="https://img.gifmagazine.net/gifmagazine/images/656808/original.gif")
+	    await ctx.send(embed=embed)
 
 token = os.environ.get('BOT_TOKEN')
 
