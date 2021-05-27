@@ -43,11 +43,11 @@ async def credits( ctx ):
 @client.command( pass_context = True )
 
 async def ударить(ctx, member: discord.Member = None):
-	    if member is None:
-		return await ctx.send("Ты что, воздух ударил?")
-	    embed=discord.Embed(title="Удар", description = "{0} ударил {1}#{2}.".format(ctx.author, member.name, member.discriminator), color=0xfff700)
-	    embed.set_thumbnail(url="https://img.gifmagazine.net/gifmagazine/images/656808/original.gif")
-	    await ctx.send(embed=embed)
+    if member is None:
+        return await ctx.send("Ты что, воздух ударил?")
+    embed=discord.Embed(title="Удар", description = "{0} ударил {1}#{2}.".format(ctx.author, member.name, member.discriminator), color=0xfff700)
+    embed.set_thumbnail(url="https://img.gifmagazine.net/gifmagazine/images/656808/original.gif")
+    await ctx.send(embed=embed)
 
 token = os.environ.get('BOT_TOKEN')
 
