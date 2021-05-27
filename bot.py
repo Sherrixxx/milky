@@ -43,9 +43,6 @@ async def credits( ctx ):
 @client.command( pass_context = True )
 
 async def ударить(ctx, member: discord.Member = None):
-	gifs_punch=["https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/3377879/SwordFight.gif?1358704239", "https://img.gifmagazine.net/gifmagazine/images/656808/original.gif"]
-	punch=random.choice(gifs_punch)
-	await ctx.send(punch)
 	    if member is None:
 		return await ctx.send("Ты что, воздух ударил?")
 	    embed=discord.Embed(title="Удар", description = "{0} ударил {1}#{2}.".format(ctx.author, member.name, member.discriminator), color=0xfff700)
