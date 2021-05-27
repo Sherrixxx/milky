@@ -8,10 +8,6 @@ client.remove_command('help')
 cluster = MongoClient("mongodb+srv://morgenshtern:tupaparolotbotaklassno@gg-wp.tltaz.mongodb.net/morgenshtern?retryWrites=true&w=majority")
 collection = cluster.ecodb.colldb
 
-gifs_punch=["https://img.gifmagazine.net/gifmagazine/images/656808/original.gif", "гифка 2"]
-    ударить=random.choice(gifs_punch)
-    await ctx.send(ударить)
-
 @client.event
 async def on_ready():
     print('Зарегистрирован в {0}.'.format(client.user))
