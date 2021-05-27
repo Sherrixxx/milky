@@ -45,7 +45,7 @@ async def credits( ctx ):
 async def ударить(ctx, member: discord.Member = None):
     if member is None:
         return await ctx.send("Ты что, воздух ударил?")
-    embed=discord.Embed(title="Удар", description = "{0.mention} ударил {1.mention}.".format(ctx.author, member.name), color=0xfff700)
+    embed=discord.Embed(title="Удар", description = "{0.mention} ударил {1}.".format(ctx.author, member.name), color=0xfff700)
     embed.set_image(url="https://img.gifmagazine.net/gifmagazine/images/656808/original.gif")
     await ctx.send(embed=embed)
 
