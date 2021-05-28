@@ -45,8 +45,10 @@ async def credits( ctx ):
 async def ударить(ctx, member: discord.Member = None):
     if member is None:
         return await ctx.send("Ты что, воздух ударил?")
+    gifs_punch=["гифка 1", "гифка 2"]
+    ударить=random.choice(gifs_punch)
     embed=discord.Embed(title="Удар", description = "{0.mention} ударил {1}.".format(ctx.author, member.mention), color=0xfff700)
-    embed.set_image(url="https://img.gifmagazine.net/gifmagazine/images/656808/original.gif")
+    embed.set_image(url = gifs_punch)
     await ctx.send(embed=embed)
 
 token = os.environ.get('BOT_TOKEN')
