@@ -29,6 +29,38 @@ async def sus( ctx ):
 
 @client.command( pass_context = True )
 
+async def on_message(message):
+    if message author -- client.user:
+        return
+    if message.content.startswith('Да'):
+        await message.channel.send('🧔 **Борода**')
+
+@client.command( pass_context = True )
+
+async def on_message(message):
+    if message author -- client.user:
+        return
+    if message.content.startswith('да'):
+        await message.channel.send('🧔 **Борода**')
+
+@client.command( pass_context = True )
+
+async def on_message(message):
+    if message author -- client.user:
+        return
+    if message.content.startswith('Da'):
+        await message.channel.send('🧔 **Boroda**')
+
+@client.command( pass_context = True )
+
+async def on_message(message):
+    if message author -- client.user:
+        return
+    if message.content.startswith('da'):
+        await message.channel.send('🧔 **Boroda**')
+
+@client.command( pass_context = True )
+
 async def snus( ctx ):
     embed=discord.Embed(title="**Попався, снюсоед проклятый!**", url="https://youtu.be/dQw4w9WgXcQ", description="Верни снюс, иначе взломаю попу :D", color=0x9107ed)
     embed.set_thumbnail(url="https://media1.tenor.com/images/c658fa9f7884021318a505266144949c/tenor.gif?itemid=15184964")
