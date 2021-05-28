@@ -30,7 +30,7 @@ async def sus( ctx ):
 @client.command( pass_context = True )
 
 async def on_message(message):
-    if message author -- client.user:
+    if message.author == client.user:
         return
     if message.content.startswith('Да'):
         await message.channel.send('🧔 **Борода**')
@@ -38,7 +38,7 @@ async def on_message(message):
 @client.command( pass_context = True )
 
 async def on_message(message):
-    if message author -- client.user:
+    if message.author == client.user:
         return
     if message.content.startswith('да'):
         await message.channel.send('🧔 **Борода**')
@@ -46,7 +46,7 @@ async def on_message(message):
 @client.command( pass_context = True )
 
 async def on_message(message):
-    if message author -- client.user:
+    if message.author == client.user:
         return
     if message.content.startswith('Da'):
         await message.channel.send('🧔 **Boroda**')
@@ -54,7 +54,7 @@ async def on_message(message):
 @client.command( pass_context = True )
 
 async def on_message(message):
-    if message author -- client.user:
+    if message.author == client.user:
         return
     if message.content.startswith('da'):
         await message.channel.send('🧔 **Boroda**')
