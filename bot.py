@@ -32,20 +32,20 @@ async def sus( ctx ):
 
 @client.command( pass_context = True )
 
-async def on_message(message):
+async def on_message( message ):
     msg = message.content.lower()
 
     if msg in borodar:
-        await message.channel.send('🧔 **Борода**')
+        await message.channel.send( '🧔 **Борода**' )
 
     if msg in borodar:
-        await message.channel.send('🧔 **Борода**')
+        await message.channel.send( '🧔 **Борода**' )
 
     if msg in boroda:
-        await message.channel.send('🧔 **Boroda**')
+        await message.channel.send( '🧔 **Boroda**' )
 
     if msg in boroda:
-        await message.channel.send('🧔 **Boroda**')
+        await message.channel.send( '🧔 **Boroda**' )
 
 @client.command( pass_context = True )
 
