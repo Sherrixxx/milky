@@ -9,6 +9,9 @@ client.remove_command('help')
 cluster = MongoClient("mongodb+srv://morgenshtern:tupaparolotbotaklassno@gg-wp.tltaz.mongodb.net/morgenshtern?retryWrites=true&w=majority")
 collection = cluster.ecodb.colldb
 
+borodar = [ 'Да', 'да', 'дА', 'дa', 'дA' ]
+boroda = [ 'Da', 'da', 'dA', 'dа', 'dА' ]
+
 @client.event
 async def on_ready():
     print('Зарегистрирован в {0}.'.format(client.user))
@@ -30,18 +33,18 @@ async def sus( ctx ):
 @client.command( pass_context = True )
 
 async def on_message(message):
-    if message.author == client.user:
-        return
-    if message.content.startswith('Да'):
+    msg = message.content.lower()
+
+    if msg in borodar:
         await message.channel.send('🧔 **Борода**')
 
-    if message.content.startswith('да'):
+    if msg in borodar:
         await message.channel.send('🧔 **Борода**')
 
-    if message.content.startswith('Da'):
+    if msg in boroda:
         await message.channel.send('🧔 **Boroda**')
 
-    if message.content.startswith('da'):
+    if msg in boroda:
         await message.channel.send('🧔 **Boroda**')
 
 @client.command( pass_context = True )
