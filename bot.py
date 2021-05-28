@@ -35,27 +35,12 @@ async def on_message(message):
     if message.content.startswith('Да'):
         await message.channel.send('🧔 **Борода**')
 
-@client.command( pass_context = True )
-
-async def on_message(message):
-    if message.author == client.user:
-        return
     if message.content.startswith('да'):
         await message.channel.send('🧔 **Борода**')
 
-@client.command( pass_context = True )
-
-async def on_message(message):
-    if message.author == client.user:
-        return
     if message.content.startswith('Da'):
         await message.channel.send('🧔 **Boroda**')
 
-@client.command( pass_context = True )
-
-async def on_message(message):
-    if message.author == client.user:
-        return
     if message.content.startswith('da'):
         await message.channel.send('🧔 **Boroda**')
 
