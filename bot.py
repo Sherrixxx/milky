@@ -50,7 +50,7 @@ async def on_guild_role_created(role):
 
 @client.event
 async def on_ready():
-	await client.change_presence(status=discord.Status.online,activity=discord.Listen(" m.help | discord.gg/r2SMG8FCQn"))
+	await client.change_presence(status=discord.Status.online,activity=discord.Game(" m.help | discord.gg/r2SMG8FCQn"))
 
 @client.command( pass_context = True )
 
@@ -89,7 +89,7 @@ async def snus( ctx ):
 @client.command( pass_context = True )
 
 async def credits( ctx ):
-    embed=discord.Embed(description="Вы все знаете, что я не мог создаваться сам по себе :D. Да, у меня есть люди, которые вдохнули в меня жизнь! **Вау, кто же это?**  \n \n**━━━━━━━━━━━━━━━━━━━━━** \n**`Sherry#7700`** — Мой создатель. \n**`Orz#6943`** — Помогал моему создателю с моим оживлением. \n**━━━━━━━━━━━━━━━━━━━━━**  \n \nОфициальный сервер в честь меня: **===>** [Тык =)](https://discord.gg/r2SMG8FCQn)")
+    embed=discord.Embed(description="Вы все знаете, что я не мог создаваться сам по себе :D. Да, у меня есть люди, которые вдохнули в меня жизнь! **Вау, кто же это?**  \n \n**━━━━━━━━━━━━━━━━━━━━━** \n**`Sherry#7700`** — Мой создатель. \n**`Orz#6943`** — Помогал моему создателю с моим оживлением. \n**━━━━━━━━━━━━━━━━━━━━━**  \n \nОфициальный сервер в честь меня: \n**===>** [Тык =)](https://discord.gg/r2SMG8FCQn)")
     embed.set_thumbnail(url="https://i.imgur.com/bk1lX1D.png")
     await ctx.send(embed=embed)
 
