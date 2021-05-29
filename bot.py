@@ -50,7 +50,7 @@ async def on_guild_role_created(role):
 
 @client.event
 async def on_ready():
-	await client.change_presence(status=discord.Status.online,activity=discord.Watch(" m.help | discord.gg/r2SMG8FCQn"))
+	await client.change_presence(status=discord.Status.online,activity=discord.Listen(" m.help | discord.gg/r2SMG8FCQn"))
 
 @client.command( pass_context = True )
 
