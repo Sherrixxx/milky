@@ -13,8 +13,8 @@ borodar = [ 'Да', 'да', 'дА', 'дa', 'дA' ]
 boroda = [ 'Da', 'da', 'dA', 'dа', 'dА' ]
 
 @client.command()
-async def say(ctx,arg):
-    await ctx.send(arg)
+async def say(ctx,* arg):
+    await ctx.send(.join(arg))
 
 @client.event
 async def on_ready():
