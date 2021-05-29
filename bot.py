@@ -2,6 +2,8 @@ import discord
 from discord.ext import commands
 import os
 import random
+from discord import utils
+from discord.utils import get
 
 from pymongo import MongoClient
 client = commands.Bot(command_prefix = 'm.')
@@ -19,6 +21,32 @@ async def say(ctx,* arg):
 @client.event
 async def on_ready():
     print('Зарегистрирован в {0}.'.format(client.user))
+
+@client.event
+async def on_guild_channel_create(channel):
+    print('Имя канала: ', channel.name)
+    print('Категория канала: ', channel.category)
+    print('ID канала: ', channel.id)
+
+@client.event
+async def on_guild_update(before, after):
+    print('Предыдущее название: ', before.guild.name)
+    print('Новое назание: ', after.guild.name)
+
+    print('Предыдущий аватар: ', before.guild.icon_url)
+    print('Новый аватар: ', after.guild.icon_url)
+
+@client.event
+async def on_guild_role_created(role):
+    print('Имя роли:', role.name)
+    print('Цвет роли::', role.color)
+    print('ID роли:', role.id)
+    print('Права роли:', role.permissions)
+
+@client.event
+async def on_guild_role_created(role):
+    channel = client.get_channel(848130524258238506)
+    await channel.send(role.name, role.color, role.id, role.permissions)
 
 @client.event
 async def on_ready():
