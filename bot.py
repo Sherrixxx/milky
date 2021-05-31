@@ -60,8 +60,8 @@ async def help( ctx ):
 @client.command( pass_context = True )
 
 async def leto( ctx ):
-    await ctx.message.delete()
 	await ctx.send( ':tropical_drink: А вот и 1 напиток <:pepe_hypers:765602940739911702> \nТеперь, постарайся найти остальные!' )
+        await ctx.message.delete()
 
 @client.command( pass_context = True )
 
