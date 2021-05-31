@@ -50,12 +50,17 @@ async def on_guild_role_created(role):
 
 @client.event
 async def on_ready():
-	await client.change_presence(status=discord.Status.online,activity=discord.Game(" m.help | discord.gg/r2SMG8FCQn"))
+	await client.change_presence(status=discord.Status.online,activity=discord.Game(" m.help"))
 
 @client.command( pass_context = True )
 
 async def help( ctx ):
 	await ctx.send( 'Бот в разработке :D' )
+
+@client.command( pass_context = True )
+
+async def leto( ctx ):
+	await ctx.send( ':tropical_drink: А вот и 1 напиток <:pepe_hypers:765602940739911702> \nТеперь, постарайся найти остальные!' )
 
 @client.command( pass_context = True )
 
