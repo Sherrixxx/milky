@@ -53,17 +53,23 @@ async def on_ready():
 	await client.change_presence(status=discord.Status.online,activity=discord.Game(" m.help"))
 
 @client.command( pass_context = True )
-
 async def help( ctx ):
 	await ctx.send( 'Бот в разработке :D' )
 
-@client.command( pass_context = True )
+@client.command(pass_context= True)
+@commands.has_permissions(kick_members=True)
+async def kick(ctx, member:discord.Member = None):
+    if not member:
+        await ctx.send( '<:milky_cross:846709234204934174> Я не понял, кого мне кинуть?' )
+        return
+    await member.kick()
+    await ctx.send( '<:milky_cross:846709234204934174> Я выгнал его!' )
 
+@client.command( pass_context = True 
 async def sus( ctx ):
 	await ctx.send( 'SUS :flushed::flushed::flushed::flushed::flushed::flushed::flushed:AMOGUS:flushed::flushed::astonished::astonished::face_with_monocle: **42**:flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed: لماذا قمت بترجمة ذلك  :cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy:**424242424242**:flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed: https://c.tenor.com/h99LQHUExJIAAAAM/19dollar-fortnite-card-among-us.gif ')
 
 @client.command( pass_context = True )
-
 async def on_message( message ):
     msg = message.content.lower()
 
@@ -80,21 +86,18 @@ async def on_message( message ):
         await message.channel.send( '🧔 **Boroda**' )
 
 @client.command( pass_context = True )
-
 async def snus( ctx ):
     embed=discord.Embed(title="**Попався, снюсоед проклятый!**", url="https://youtu.be/dQw4w9WgXcQ", description="Верни снюс, иначе взломаю попу :D", color=0x9107ed)
     embed.set_thumbnail(url="https://media1.tenor.com/images/c658fa9f7884021318a505266144949c/tenor.gif?itemid=15184964")
     await ctx.send(embed=embed)
 
 @client.command( pass_context = True )
-
 async def credits( ctx ):
     embed=discord.Embed(description="Вы все знаете, что я не мог создаваться сам по себе :D. Да, у меня есть люди, которые вдохнули в меня жизнь! **Вау, кто же это?**  \n \n**━━━━━━━━━━━━━━━━━━━━━** \n**`Sherry#7700`** — Мой создатель. \n**`Orz#6943`** — Помогал моему создателю с моим оживлением. \n**━━━━━━━━━━━━━━━━━━━━━**  \n \nОфициальный сервер в честь меня: \n**===>** [Тык =)](https://discord.gg/r2SMG8FCQn)")
     embed.set_thumbnail(url="https://i.imgur.com/bk1lX1D.png")
     await ctx.send(embed=embed)
 
 @client.command( pass_context = True )
-
 async def ударить(ctx, member: discord.Member = None):
     if member is None:
         return await ctx.send("Ты что, воздух ударил?")
