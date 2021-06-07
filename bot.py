@@ -44,15 +44,20 @@ async def kick_error(ctx, error):
     if isinstance(error, commands.CheckFailure):
       await ctx.send( '<:milky_cross:846709234204934174> Что-то мне кажется, что у тебя силёнок нет для этой команды.' )
 
-@client.command(pass_context= True)
+@Bot.command(pass_context= True)
 @commands.has_permissions(manage_roles=True)
 async def mute(ctx, member: discord.Member=None):
     if not member:
         await ctx.send( '<:milky_cross:846709234204934174> И зачем я закрыл рот воздуху?' )
         return
     await ctx.send( '<:milky_tick:846709199747809281> Я заклеил **{0}#{1}** рот!'.format(member.name, member.discriminator))
-    role = discord.utils.get(ctx.guild.roles, name="В муте")
+    role = discord.utils.get(ctx.guild.roles, name="Muted")
     await member.add_roles(role)
+
+@mute.error
+async def mute_error(ctx, error):
+    if isinstance(error, commands.CheckFailure):
+        await ctx.send( '<:milky_cross:846709234204934174> У тебя нет скотча.' )
 
 @client.command( pass_context = True )
 async def sus( ctx ):
