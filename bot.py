@@ -63,6 +63,14 @@ async def mute_error(ctx, error):
 async def sus( ctx ):
 	await ctx.send( 'SUS :flushed::flushed::flushed::flushed::flushed::flushed::flushed:AMOGUS:flushed::flushed::astonished::astonished::face_with_monocle: **42**:flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed: لماذا قمت بترجمة ذلك  :cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy:**424242424242**:flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed: https://c.tenor.com/h99LQHUExJIAAAAM/19dollar-fortnite-card-among-us.gif ')
 
+@Bot.command(name='шар', pass_context= True)
+async def шар(ctx, arg):
+        if arg != '':
+            messages = [':thumbsup: Да.', ':thumbsdown: Нет.', ':green_book: Эта книжка говорит... **Да!**', ':red: Эта книжка говорит... **Нет!**', ':compass: Стрелка показывает на... **Да!**', ':pensive: Я устал, **не трогай меня...**', 'Да **неееет.**', 'Однозначно **да!**', '**Конечно!**', 'Ты ещё спрашиваешь? П-фф, **конечно да!**', 'Эм, **точно нет.**', ':person_bouncing_ball: Я побежал есть пельмени, не хочу отвечать.']
+            kv1 = int(len(messages))
+            messages_output = messages.pop(random.randint(0, kv1 - 1))
+            await ctx.send(f'{messages_output}')
+
 @client.command( pass_context = True )
 async def on_message( message ):
     msg = message.content.lower()
