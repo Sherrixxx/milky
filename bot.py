@@ -63,7 +63,7 @@ async def kick(ctx, member:discord.Member = None):
         await ctx.send( '<:milky_cross:846709234204934174> Я не понял, кого мне кинуть?' )
         return
     await member.kick()
-    await ctx.send( '<:milky_tick:846709199747809281> **{}#{}**.format(member.name, member.discriminator) Был изгнан из этого места!
+    await ctx.send( '<:milky_tick:846709199747809281> **{0}#{1}**.format(member.name, member.discriminator) Был изгнан из этого места!
 
 @client.command( pass_context = True 
 async def sus( ctx ):
