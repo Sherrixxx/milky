@@ -66,7 +66,7 @@ async def sus( ctx ):
 @client.command(name='шар', pass_context= True)
 async def шар(ctx, arg):
         if arg != '':
-            messages = [':thumbsup: Да.', ':thumbsdown: Нет.', ':green_book: Эта книжка говорит... **Да!**', ':red: Эта книжка говорит... **Нет!**', ':compass: Стрелка показывает на... **Да!**', ':pensive: Я устал, **не трогай меня...**', 'Да **неееет.**', 'Однозначно **да!**', '**Конечно!**', 'Ты ещё спрашиваешь? П-фф, **конечно да!**', 'Эм, **точно нет.**', ':person_bouncing_ball: Я побежал есть пельмени, не хочу отвечать.']
+            messages = [':thumbsup: Да.', ':thumbsdown: Нет.', ':green_book: Эта книжка говорит... **Да!**', ':red_book: Эта книжка говорит... **Нет!**', ':compass: Стрелка показывает на... **Да!**', ':pensive: Я устал, **не трогай меня...**', 'Да **неееет.**', 'Однозначно **да!**', '**Конечно!**', 'Ты ещё спрашиваешь? П-фф, **конечно да!**', 'Эм, **точно нет.**', ':person_bouncing_ball: Я побежал есть пельмени, не хочу отвечать.']
             kv1 = int(len(messages))
             messages_output = messages.pop(random.randint(0, kv1 - 1))
             await ctx.send(f'{messages_output}')
