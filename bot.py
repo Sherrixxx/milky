@@ -51,7 +51,7 @@ async def mute(ctx,member:discord.Member,time:int,reason):
         await ctx.send( '<:milky_cross:846709234204934174> И зачем я закрыл рот воздуху?' )
         return
     await ctx.send( '<:milky_tick:846709199747809281> Я заклеил **{0}#{1}** рот!'.format(member.name, member.discriminator))
-    mute_role = discord.utlis.get(ctx.messages.guild.roles, name = 'Silent 📎')
+    mute_role = discord.utlis.get(ctx.guild.roles, name = 'Silent 📎')
     await member.add_roles(mute_role)
 
 @mute.error
