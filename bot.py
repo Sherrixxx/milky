@@ -23,32 +23,6 @@ async def on_ready():
     print('Зарегистрирован в {0}.'.format(client.user))
 
 @client.event
-async def on_guild_channel_create(channel):
-    print('Имя канала: ', channel.name)
-    print('Категория канала: ', channel.category)
-    print('ID канала: ', channel.id)
-
-@client.event
-async def on_guild_update(before, after):
-    print('Предыдущее название: ', before.guild.name)
-    print('Новое назание: ', after.guild.name)
-
-    print('Предыдущий аватар: ', before.guild.icon_url)
-    print('Новый аватар: ', after.guild.icon_url)
-
-@client.event
-async def on_guild_role_created(role):
-    print('Имя роли:', role.name)
-    print('Цвет роли::', role.color)
-    print('ID роли:', role.id)
-    print('Права роли:', role.permissions)
-
-@client.event
-async def on_guild_role_created(role):
-    channel = client.get_channel(848130524258238506)
-    await channel.send(role.name, role.color, role.id, role.permissions)
-
-@client.event
 async def on_ready():
 	await client.change_presence(status=discord.Status.online,activity=discord.Game(" m.help"))
 
@@ -64,6 +38,11 @@ async def kick(ctx, member:discord.Member = None):
         return
     await member.kick()
     await ctx.send( '<:milky_tick:846709199747809281> **{0}#{1}** Был изгнан из этого места!'.format(member.name, member.discriminator))
+
+@kick.error
+async def kick_error(ctx, error):
+    if isinstance(error, commands.CheckFailure):
+      await ctx.send( '<:milky_cross:846709234204934174> Что-то мне кажется, что у тебя силёнок нет для этой команды.' )
 
 @client.command( pass_context = True )
 async def sus( ctx ):
