@@ -44,7 +44,7 @@ async def kick_error(ctx, error):
     if isinstance(error, commands.CheckFailure):
       await ctx.send( '<:milky_cross:846709234204934174> Что-то мне кажется, что у тебя силёнок нет для этой команды.' )
 
-@client.command()
+@client.command(pass_context= True)
 @commands.has_permissions(manage_messages=True)
 async def mute(ctx,member:discord.Member,time:int,reason):
     if not member:
