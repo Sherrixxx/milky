@@ -44,6 +44,16 @@ async def kick_error(ctx, error):
     if isinstance(error, commands.CheckFailure):
       await ctx.send( '<:milky_cross:846709234204934174> Что-то мне кажется, что у тебя силёнок нет для этой команды.' )
 
+@Bot.command(pass_context= True)
+@commands.has_permissions(manage_roles=True)
+async def mute(ctx, member: discord.Member=None):
+    if not member:
+        await ctx.send( '<:milky_cross:846709234204934174> И зачем я закрыл рот воздуху?' )
+        return
+    await ctx.send( '<:milky_tick:846709199747809281> Я заклеил **{0}#{1}** рот!'.format(member.name, member.discriminator))
+    role = discord.utils.get(ctx.guild.roles, name="В муте")
+    await member.add_roles(role)
+
 @client.command( pass_context = True )
 async def sus( ctx ):
 	await ctx.send( 'SUS :flushed::flushed::flushed::flushed::flushed::flushed::flushed:AMOGUS:flushed::flushed::astonished::astonished::face_with_monocle: **42**:flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed: لماذا قمت بترجمة ذلك  :cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy:**424242424242**:flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed: https://c.tenor.com/h99LQHUExJIAAAAM/19dollar-fortnite-card-among-us.gif ')
