@@ -54,7 +54,7 @@ async def мут(ctx, member: discord.Member=None):
     role = discord.utils.get(ctx.guild.roles, name="В муте")
     await member.add_roles(role)
 
-@mute.error
+@мут.error
 async def mute_error(ctx, error):
     if isinstance(error, commands.CheckFailure):
         await ctx.send( '<:milky_cross:846709234204934174> У тебя нет скотча.' )
