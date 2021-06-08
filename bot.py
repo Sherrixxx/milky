@@ -62,7 +62,7 @@ async def mute_error(ctx, error):
 @client.command()
 async def пинг(ctx):
     ping = round(client.latency * 1000)
-    await ctx.send(f" Мой пинг: `**{ping} MS**`")
+    await ctx.send(f" Мой пинг: **{ping} MS**")
 
 @client.command( pass_context = True )
 async def sus( ctx ):
