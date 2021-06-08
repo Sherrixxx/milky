@@ -68,7 +68,7 @@ async def пинг(ctx):
 @commands.has_permissions(manage_messages=True)
 async def очистить(ctx, amount = 1000):
     await ctx.channel.purge(limit=amount)
-    await ctx.send( '<:milky_tick:846709199747809281> Я удалил f'{amount} сообщений!' )    
+    await ctx.send( '<:milky_tick:846709199747809281> Я удалил f'{amount}' сообщений!' )    
 
 @очистить.error
 async def clear_error(ctx, error):
