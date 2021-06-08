@@ -64,6 +64,17 @@ async def пинг(ctx):
     ping = round(client.latency * 1000)
     await ctx.send(f" Мой пинг: **{ping} MS**")
 
+@client.command()
+@commands.has_permissions(manage_messages=True)
+async def очистить(ctx, amount = 1000):
+    await ctx.channel.purge(limit=amount)
+    await ctx.send( '<:milky_tick:846709199747809281> Я удалил f'{amount} сообщений!' )    
+
+@очистить.error
+async def clear_error(ctx, error):
+    if isinstance(error, commands.CheckFailure):
+       await ctx.send( '<:milky_cross:846709234204934174> Йоу, найди метлу, руками будешь долго очищать.' )
+
 @client.command( pass_context = True )
 async def sus( ctx ):
 	await ctx.send( 'SUS :flushed::flushed::flushed::flushed::flushed::flushed::flushed:AMOGUS:flushed::flushed::astonished::astonished::face_with_monocle: **42**:flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed: لماذا قمت بترجمة ذلك  :cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy::cowboy:**424242424242**:flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed::flushed: https://c.tenor.com/h99LQHUExJIAAAAM/19dollar-fortnite-card-among-us.gif ')
