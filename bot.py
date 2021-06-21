@@ -24,7 +24,7 @@ async def on_ready():
 
 @client.event
 async def on_ready():
-	await client.change_presence(status=discord.Status.online,activity=discord.Game(" m.help"))
+	await client.change_presence(status=discord.Status.online,activity=discord.Game("m.help"))
 
 @client.command( pass_context = True )
 async def help( ctx ):
